@@ -56,3 +56,21 @@ function addEmployees() {
       : writeToFile("./dist/myTeam.html", genFile(team));
   });
 }
+
+//Prompts the manager question then to the next question
+function init() {
+  inquirer.prompt(quest.managerQuest).then((res) => {
+    team.push(
+      new Manager(
+        res.managerName,
+        res.managerId,
+        res.managerEmail,
+        res.managerOfficeNum
+      )
+    );
+    addEmployees();
+  });
+}
+
+//Initialize the App
+init();
