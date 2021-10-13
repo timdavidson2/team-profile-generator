@@ -43,3 +43,22 @@ function genManager(team) {
   });
   return managerData;
 }
+
+function genEngineer(obj) {
+  return `			
+	<div class="col-2 cardCont">
+	<div class="card" >
+	<div class="card-body">
+	<h5 class="card-title">${obj.getName()}</h5>
+	<p class="card-text"><i class="bi bi-lightbulb"></i>${obj.getRole()}
+	</p>
+	</div>
+	<ul class="list-group list-group-flush">
+	<li class="list-group-item">ID: ${obj.getId()}</li>
+	<li class="list-group-item">Email: <a href="mailto:${obj.getEmail()}">${obj.getEmail()}</a></li>
+	<li class="list-group-item">GitHub: <a href="https://github.com/${obj.getGithub()}">${obj.getGithub()}</a></li>
+	</ul>
+	</div>
+	</div>
+	`;
+}
