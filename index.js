@@ -38,3 +38,11 @@ function createEng() {
     addEmployees();
   });
 }
+
+//Asks the user which employee type they want to add
+function createEmp() {
+  inquirer.prompt(quest.addEmpType).then((res) => {
+    // console.log(res);
+    res.typeEmp === "Engineer" ? createEng() : createInt();
+  });
+}
