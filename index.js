@@ -28,3 +28,13 @@ function createInt() {
     addEmployees();
   });
 }
+
+//Will create the Engineer Obj from the questions
+function createEng() {
+  inquirer.prompt(quest.engineerQuest).then((res) => {
+    team.push(
+      new Engineer(res.engName, res.engId, res.engEmail, res.engGithub)
+    );
+    addEmployees();
+  });
+}
