@@ -13,3 +13,10 @@ const quest = require("./lib/questions");
 
 //Holder array for added members
 const team = [];
+
+//Write the file check for errors
+function writeToFile(fileName, f) {
+  fs.writeFile(fileName, f, (error) => {
+    error ? console.log(error) : console.log("Check out your HTML file!");
+  });
+}
