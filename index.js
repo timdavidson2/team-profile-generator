@@ -20,3 +20,11 @@ function writeToFile(fileName, f) {
     error ? console.log(error) : console.log("Check out your HTML file!");
   });
 }
+
+//Will create the Intern Obj from the questions
+function createInt() {
+  inquirer.prompt(quest.internQuest).then((res) => {
+    team.push(new Intern(res.intName, res.intId, res.intEmail, res.intSchool));
+    addEmployees();
+  });
+}
