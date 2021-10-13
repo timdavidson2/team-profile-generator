@@ -46,3 +46,13 @@ function createEmp() {
     res.typeEmp === "Engineer" ? createEng() : createInt();
   });
 }
+
+//Asks the user if they want to add more employees
+function addEmployees() {
+  inquirer.prompt(quest.addEmpQuest).then((res) => {
+    // console.log(res);
+    res.empAdd === "Yes"
+      ? createEmp()
+      : writeToFile("./dist/myTeam.html", genFile(team));
+  });
+}
