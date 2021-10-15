@@ -23,6 +23,9 @@ The app runs from the 'node index' command line command.
 
 Open the index.js file in the current terminal and then run 'node index'.
 ![HTML webpage titled “My Team”](./assets/myTeamScreenshot.png)
+Demonstration of app
+[Demonstration](https://watch.screencastify.com/v/TvfxKNvxkGAekP3GWSUo)
+
 ## License
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
